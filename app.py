@@ -5,7 +5,7 @@ print(content.introMessage)
 
 setKey = content.demoCreds
 
-sessionSeller = classy.Seller(setKey,True)
+sessionSeller = classy.Seller(setKey, True)
 
 
 while True:
@@ -16,17 +16,7 @@ while True:
     elif choice == "m":
         print(content.menu)
     elif choice == "s":
-        print("\n\n-==Session Status==-")
-        print("\n--API Credentials--")
-        print(display.displayApiKeyStatus(sessionSeller))
-        print("\n--Carrier Accounts Connected--")
-        print(display.displayCarriers(sessionSeller))
-        print("--Session Shipments--")
-        print(display.displayShipments(sessionSeller))
-        print("--Session Rates--")
-        print(display.displayRates(sessionSeller))
-        print("--Session Labels--")
-        print(display.displayLabels(sessionSeller))
+        print(display.diplaySessionStatus(sessionSeller))
     elif choice == "1":
         resetKey = actions.set_auth()
         sessionSeller.apiKey, sessionSeller.validKey = resetKey[1], resetKey[2]

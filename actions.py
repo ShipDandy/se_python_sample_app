@@ -1,4 +1,4 @@
-import json, calls, content, display
+import calls, content, display
 
 
 def set_auth():
@@ -11,7 +11,7 @@ def set_auth():
         return ("Using default key.", defaultKey, True, auth_test[1])
     else:
         auth_test = calls.get_carriers(key)
-    
+
         if auth_test[0] == 200:
             return ("API credentials authorized.\nAssociating carrier accounts with this session.", key, True, auth_test[1])
         else:
@@ -41,7 +41,7 @@ def add_fedex(sessionSeller):
     print("In this example we will be adding a FedEx account that has parcelcast enabled. To add this account we will be providing the following details:")
     print(content.addCarrierCallDisplay + content.fedexDisplayJson)
 
-    pause = input("Press enter to continue.\n")
+    input("Press enter to continue.\n")
 
     addFedexParcelcast = calls.add_fedex_account(sessionSeller.apiKey, content.fedexPayload)
 
@@ -59,7 +59,7 @@ def add_fedex(sessionSeller):
     if removeFedexparcelcast != 204:
         return "Looks like the attempt failed because of error: {}.\n".format(str(removeFedexparcelcast))
 
-    pause2 = ("Now let's see if the Parcelcast account is gone. Hit enter to continue.")
+    input("Now let's see if the Parcelcast account is gone. Hit enter to continue.")
 
     print(query_carrier_list(sessionSeller))
 
@@ -95,7 +95,7 @@ def create_shipment(sessionSeller):
             print("Multi-Package shipment selected!")
             input("Hit enter to see the call we'll be making.")
             print(content.createShipmentCallDisplay + content.displayExampleShipment2)
-            pause = input("Press enter to continue.\n")
+            input("Press enter to continue.\n")
             createShipmentCall = calls.create_shipment(sessionSeller.apiKey, content.exampleShipment2)            
             break
         else:
@@ -170,7 +170,7 @@ def shop_for_rates(sessionSeller):
 
     print("Here's a look at the call we'll be making:")
     print(content.getRatesCallDisplay + content.displayExampleRatesJson.format("{", "}", shipmentId, carrierId))
-    pause = input("Press enter to continue.\n")
+    input("Press enter to continue.\n")
 
     try:
         feed = calls.get_rates_call(sessionSeller.apiKey, shipmentId, carrierId)
@@ -258,7 +258,7 @@ def generate_label(sessionSeller):
     print("\nHere's a look at the call we'll be making:")
     print(content.createLabelCallDisplay.format(rateId) + content.displayExampleLabelJson.format("{", "}", str(isTest).lower()))
 
-    pause = input("Press enter to continue.\n")
+    input("Press enter to continue.\n")
 
     print("Making request. . .\n")
     
@@ -342,3 +342,4 @@ def testo(key, labelToVoid):
         pass
 
     return response
+    
