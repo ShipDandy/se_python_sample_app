@@ -48,4 +48,4 @@ while True:
         print(actions.testo("Rc62TSSygDf3bTARBLeRunyVM3yeTA60WcEMkdnCWCg", "se-15269871"))
 
 
-print("\nThanks for take this time to check out a small portion of ShipEngine API capabilities. Head over to https://docs.shipengine.com/docs for a more detailed look at our API library.\n\nShipEngine: You Can Call on Us.")
+print("\nThanks for take this time to check out a small portion of ShipEngine's API capabilities. Head over to https://docs.shipengine.com/docs for a more detailed look at our API library.\n\nShipEngine: You Can Call on Us.")
