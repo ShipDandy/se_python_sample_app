@@ -7,6 +7,7 @@ setKey = content.demoCreds
 
 sessionSeller = classy.Seller(setKey, True)
 
+print(content.menu)
 
 while True:
     choice = input("\nEnter command number or (m) for menu: ").lower().strip(" ")

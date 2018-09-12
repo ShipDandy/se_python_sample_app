@@ -48,7 +48,7 @@ def add_fedex(sessionSeller):
     if addFedexParcelcast[0] != 200:
         return "Looks like the attempt failed because of error: {}.\n".format(str(addFedexParcelcast))
 
-    print("By listing carriers with another call we can check to see if it is on your account.")
+    print("By listing carriers with another call we can check to see if it is on your account.\n")
     print(query_carrier_list(sessionSeller))
     print("There it is under Carrier ID {}! It's just that easy.".format(addFedexParcelcast[1]["carrier_id"]))
 
@@ -59,7 +59,7 @@ def add_fedex(sessionSeller):
     if removeFedexparcelcast != 204:
         return "Looks like the attempt failed because of error: {}.\n".format(str(removeFedexparcelcast))
 
-    input("Now let's see if the Parcelcast account is gone. Hit enter to continue.")
+    input("Now let's see if the Parcelcast account is gone. Hit enter to continue.\n")
 
     print(query_carrier_list(sessionSeller))
 
@@ -231,7 +231,7 @@ def generate_label(sessionSeller):
             return "Okay, leaving the label section."
         elif len(rateId) == 0:
             print("It looks like nothing was entered for the rate ID. Please try again or enter (q) to quit this section.")
-        elif option == "l":
+        elif rateId == "l":
             print("-Session Rates-")
             print(display.displayRates(sessionSeller))
         elif rateId[0:3] != "se-":

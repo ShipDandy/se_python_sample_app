@@ -2,7 +2,7 @@ demoCreds = "R1KfbroLkK9ZWIP70GLGxnS45TeVuMEzbcK+XBYP+qg"
 
 introMessage = "\nWelcome to the ShipEngine example app for Python 3!\nWith this program we'll demonstrate how easy it is to get set up with ShipEngine and make use of our API Library.\nFollow the numbered steps in the menu to see how easy it is to work with our APIs."
 
-menu = "\n(1) Connect ShipEngine Account\n(2) Add an Example FedEx Account\n(3) Create a Shipment\n(4) Get Rates for a Shipment\n(5) Print a Shipping Label\n\n(s) Check User Status\n(v) Void a Label\n(q) Quit Program\n"
+menu = "\n(1) Connect ShipEngine Account\n(2) Add an Example FedEx Account\n(3) Create a Shipment\n(4) Get Rates for a Shipment\n(5) Print a Shipping Label\n\n(s) Check User Status\n(v) Void a Label\n(q) Quit Program"
 
 authFailure = {"carriers":[{"carrier_id": "error","carrier_account":"error","friendly_name":"error","nickname":"error","account_number":"error","primary":"error","has_multi_package_supporting_services":"error"}]}
 
